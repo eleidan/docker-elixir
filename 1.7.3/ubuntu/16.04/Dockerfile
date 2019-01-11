@@ -4,7 +4,7 @@ LABEL maintainer="Oleg Kulyk" \
       description="Elixir 1.7.3 based on Ubuntu 16.04" \
       init="docker run -it --rm --user $(id -u) -v $(pwd):/home/phantom/app eleidan/elixir:1.7.3-ubuntu-16.04 docker-init.sh" \
       run="docker run -it --rm --user $(id -u) -v $(pwd):/home/phantom/app eleidan/elixir:1.7.3-ubuntu-16.04" \
-      version="2018-10-15"
+      version="2019-01-11"
 
 WORKDIR $HOME/app
 
