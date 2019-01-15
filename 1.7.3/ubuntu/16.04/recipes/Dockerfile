@@ -9,15 +9,4 @@ RUN usermod -u ${HOST_UID} phantom
 RUN groupmod -g ${HOST_GID} phantom
 RUN chown phantom:phantom ${HOME}
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-      locales \
-    && rm -rf /var/lib/apt/lists/*
-
-ENV LANG=en_US.UTF-8 \
-    LANGUAGE=en_US
-
-RUN echo $LANG UTF-8 > /etc/locale.gen \
-    && locale-gen \
-    && update-locale
-
 USER phantom

@@ -11,6 +11,18 @@ WORKDIR $HOME/app
 COPY docker-init.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-init.sh
 
+# Set up locales with utf-8 support
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      locales \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV LANG=en_US.UTF-8 \
+    LANGUAGE=en_US
+
+RUN echo $LANG UTF-8 > /etc/locale.gen \
+    && locale-gen \
+    && update-locale
+
 # Elixir
 ARG ELIXIR_VERSION="1.7.3"
 ARG ELIXIR_DOWNLOAD_SHA512="f8b0ac405531d46f4b65f459970c4b82892f8db51028f172072748269a922db65cb58e36239cd26dc39e5bdebd08a0e630ecbc267b6ff55a15d188483d78a0e5"
