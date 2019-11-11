@@ -1,4 +1,4 @@
-FROM eleidan/erlang:21.1-ubuntu-16.04
+FROM eleidan/erlang:22.1.6-ubuntu-16.04
 
 LABEL maintainer="Oleg Kulyk" \
       description="Elixir 1.7.3 based on Ubuntu 16.04" \
