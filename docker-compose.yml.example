@@ -1,0 +1,14 @@
+version: '2'
+
+volumes:
+  bash-history:
+
+services:
+  dev:
+    image: eleidan/elixir:draft
+    build:
+      context: ./1.11.2/ubuntu/16.04
+    user: phantom
+    volumes:
+      - .:/home/phantom/app
+      - bash-history:/home/phantom/bash-history
