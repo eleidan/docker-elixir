@@ -1,10 +1,10 @@
-FROM eleidan/erlang:22.1.6-ubuntu-16.04
+FROM eleidan/erlang:23.1-ubuntu-16.04
 
 LABEL maintainer="Oleg Kulyk" \
       description="Elixir 1.7.3 based on Ubuntu 16.04" \
       init="docker run -it --rm --user $(id -u) -v $(pwd):/home/phantom/app eleidan/elixir:1.7.3-ubuntu-16.04 docker-init.sh" \
       run="docker run -it --rm --user $(id -u) -v $(pwd):/home/phantom/app eleidan/elixir:1.7.3-ubuntu-16.04" \
-      version="2019-01-11"
+      version="2020-11-15"
 
 WORKDIR $HOME/app
 
