@@ -1,5 +1,5 @@
 services:
   elixir:
-    image: eleidan/elixir:1.17-ubuntu-24.04
+    image: eleidan/elixir:1.17.0-ubuntu-24.04
     build:
       context: ./1.17/ubuntu/24.04/
