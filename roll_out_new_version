@@ -83,7 +83,7 @@ eval set -- "$PARSED"
 process_params $@
 validate_input
 mkdir -p ${RELEASE_VERSION}
-SOURCE_VERSION="1.7.3"
+SOURCE_VERSION="1.17"
 cp -R ${SOURCE_VERSION}/* ${RELEASE_VERSION}/
 
 SEMVER_PATTERN="[0-9]+\.[0-9]+\.*[0-9]*"
